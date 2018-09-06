@@ -1,0 +1,92 @@
+.log-in{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	box-sizing: border-box;
+	background: $chefwordcolor;
+	font-family: $fontstyle-noto;
+	color: $wordcolor;
+	.log-in-title{
+		font-size: $font-normal*3;
+		font-weight: 900;
+		width: 100%;
+		text-align: center;
+	}
+	.log-in-subtitle{
+		font-size: $font-20;
+		font-weight: 900;
+		width: 100%;
+	    text-align: center;
+		margin-top: 5px;
+		margin-bottom: 35px;
+	}
+	.log-in-box{
+		width: 300px;
+		border-top: 3px solid  #FF5E45;
+		margin:0 auto;
+		box-sizing: border-box;
+		padding:12px 15px 15px 15px;
+		background: #EFE9E7;
+	    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	    &:hover{
+	    	box-shadow: 6px 6px 10px 0px rgba(0,0,0,0.16);
+	    }
+	    .LOGIN{
+	    	text-align: center;
+	    	font-size: $font-18;
+	    	font-weight: 900;
+	    }
+	    .email-address{
+				display: block;
+				line-height: 21px;
+	    	margin-top: 16px;
+	    	margin-bottom: 3px;
+	    }
+	    .log-in-email{
+	    	position: relative;
+	    	width: 100%;
+	    }
+	    .log-in-password{
+	    	position: relative;
+	    	margin-bottom: 30px;
+	    	.forget-password{
+				font-size: 14px;
+				color:#FF5E45;
+				line-height: 19px;
+			}
+	    }
+	    input[type="email"],input[type=password]{
+			background: #FFFFFF;
+			border: 1px solid #CCCCCC;
+			box-shadow: inset 0px 1px 0px 0px #ECECEC;
+			border-radius: 3px;
+			outline:none;
+			width: 100%;
+			text-indent: 30px;
+			&:hover{
+				background-color:#F0FABF
+			}
+			&:focus{
+				background-color:#F0FABF;
+			}
+		}
+		.far.fa-envelope, .fas.fa-unlock-alt{
+			position:absolute;
+			top: 6px;
+			left: 9px;
+			color:rgba(61,17,0,0.50);
+		}
+
+		.login-send{
+			width: 100%;
+			.pure-button.register, .pure-button.log-in-send{
+				background: rgba(0,0,0,0.35);
+				border-radius: 3px;
+				width: 49%;
+				color:white;
+				&:hover{
+					background:#F56C23 100%;
+				}
+			}
+		}
+	}
+}

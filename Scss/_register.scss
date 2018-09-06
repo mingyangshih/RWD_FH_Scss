@@ -1,0 +1,102 @@
+.register{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	box-sizing: border-box;
+	background: $chefwordcolor;
+	font-family: $fontstyle-noto;
+	color: $wordcolor;
+	@include pad {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+	.log-in-title {
+	    font-size: 48px;
+	    font-weight: 900;
+	    width: 100%;
+	    text-align: center;
+	}
+	.log-in-subtitle {
+	    font-size: 20px;
+	    font-weight: 900;
+	    width: 100%;
+	    text-align: center;
+	    margin-top: 5px;
+	    margin-bottom: 35px;
+	}
+	.register-box{
+		width: 74.1039%;
+		margin:0 auto;
+		padding:15px;
+		box-sizing: border-box;
+		border-top:3px solid #FF5E45;
+		@include iphone5-h {
+			width: 85%;
+		}
+		.register-title{
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 16px;
+		}
+		.register-applyer,.register-content{
+			display:inline-block;
+			width: 49%;
+			box-sizing: border-box;
+			vertical-align: top;
+			@include iphone6-v {
+				display:block;
+				width: 100%;
+			}
+		}
+		.register-applyer{
+			padding-left:2%;
+			.register-email,.register-password{
+				margin-bottom: 3px;
+			}
+			.register-password{
+				margin-top: 15px;
+			}
+			.register-password-in{
+				position:relative;
+				input{
+					margin-bottom: 12px;
+				}
+				.fas.fa-unlock-alt.check{
+					position:absolute;
+					top: 45px;
+					left: 9px;
+					color:rgba(61,17,0,0.50);
+				}
+				.has-account{
+					font-size: 14px;
+					color:#FF5E45;
+					line-height: 19px;
+					text-decoration: none;
+				}
+			}
+			@include log-in;/*加入login & register 共通寫法*/
+			.register-send{
+				float:right;
+				.pure-button{
+					background: rgba(0,0,0,0.35);
+					border-radius: 3px;
+					width: 125px;
+					color:white;
+					&:hover{
+						background:#F56C23 100%
+					}
+				}
+			}
+		}
+		.register-content{
+			font-size: 18px;
+			line-height: 21px;
+			@include iphone6-v {
+				p{
+					margin-bottom: 16px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,374 @@
+.wrap{
+	max-width: $width;
+	margin:0 auto;
+}
+
+/*header banner*/
+
+.banner{
+	position: relative;
+	height: 420px;
+	background-image:url("#{$images}/header_desktop.png");
+	z-index: 1;
+	background-repeat: no-repeat;
+	width: 100%;
+	background-size: 100% 420px;
+	@include pad {
+		background-image:url("#{$images}/header_mobile.png");
+	}
+	@include iphone5-h {
+		height: 420px;
+		background-size:100% 420px;
+	}
+	@include iphone6-v {
+		height: 240px;
+		background-size: 100% 240px;
+	}
+	@include iphone5-v {
+		height: 200px;
+		background-size: 100% 200px;
+	}
+	.header_logo_list{
+		color: #FFF;
+		position: absolute;
+		z-index: 3;
+		width: 100%;
+		font-family: $fontstyle-noto;
+		background-color: rgba(0,0,0,0.75);
+		height: auto;
+		&:hover{
+			background-color: rgba(160,160,160,0.75);
+		}
+		h1 a {
+			text-decoration: none;
+			font-size: 24px;
+			color:#FFF;
+			line-height: 24px;
+			margin:16px 0 16px 42px;
+			display:block;
+			float: left;
+			font-weight: bold;
+			@include replace-word;
+			background-image: url("#{$images}/logo_w@svg.svg");
+			width: 120px;
+			&:hover{
+				color: #ADF5FB;
+			}
+			@include pad {
+				margin-left: 13px;
+			}
+			@include iphone6-v {
+				margin-left: 13px;
+			}
+			@include iphone5-v {
+				margin-left: 13px;
+			}
+		}
+		.list{
+			float: right;
+			margin-right: 48px;
+			margin-top: 18px;
+			@include iphone5-h {
+				display: none;
+			}
+
+		}
+		.list li{
+			float:left;
+			&:nth-child(1){
+				margin-right: 30px;
+			}
+			&:nth-child(2){
+				margin-right: 30px;
+			}
+		}
+		.list li a{
+			text-decoration: none;
+			color: #FFF;
+			font-family: $fontstyle;
+			font-size: $font-normal;
+			&:hover{
+				color: #ADF5FB;
+			}
+			@include pad{
+				font-size: $font-normal*5/4;
+				font-weight: bold;
+			}
+		}
+		/*hamburger list setting*/
+
+		.hamburger_list a {
+			float: right;
+			margin-top: 18px;
+			display: none;
+			text-decoration: none;
+			@include iphone5-h {
+				display: block;
+				margin-right: 22px;
+				font-size: 24px;
+				color: $linkcolor;
+			}
+		}
+	}
+	/*banner content*/
+	.banner_content{
+		font-family: $fontstyle;
+		background-color: rgba(0,0,0,0.35);
+		width: 43.851%;
+		z-index: 5;
+		position: absolute;
+		margin-top: 123px;
+		margin-left: 28.122%;
+		@include iphone6-v {
+			display:none;
+		}
+		h2{
+			font-size: 36px;
+			color: $linkcolor;
+			text-align: center;
+			display: block;
+			line-height: 48px;
+			margin-top: 20px;
+			font-weight: bold;
+			@include pad {
+				font-size: 29px;
+			}
+			@include iphone6-h{
+				font-size: 26px;
+			}
+			@include iphone5-h{
+				font-size: 22px;
+			}
+		}
+		p{
+			color: $linkcolor;
+			font-size: 20px;
+			text-align: center;
+			margin-top: 16px;
+			display: block;
+			@include pad {
+				font-size: 18px;
+			}
+		}
+		span{
+			display:block;
+			line-height: 26px;
+			margin-bottom: 26px;
+		}
+	}
+}
+
+/*jquery click effect*/
+.menu-show {
+	.banner {
+		.header_logo_list {
+			.hamburger_list a {
+				@include iphone5-h {
+					color: #D1148A;
+				}
+			}
+			.list{
+				display: inline-block;
+				float: none;
+				margin-right: 0;
+				left: 0;
+				width: 100%;
+				top: 40px;
+				li{
+					width: 33.3333%;
+					text-align: center;
+					margin-right: 0;
+					border:1px solid #C44444;
+					box-sizing: border-box;
+					border-radius: 5px;
+					transition: all .5s;
+					height: 44px;
+					&:hover{
+						background-color:#912B2B;
+					}
+					a{
+						font-size: 20px;
+						color: #E8DCDC;
+						font-weight: bold;
+						line-height: 42px;
+					}
+				}
+			}
+
+		}
+	}
+}
+/*footer*/
+.footer {
+	width: 100%;
+	background-color:rgba(239,233,231,1);
+	font-family: $fontstyle;
+	color: $wordcolor;
+	position: relative;
+	height: auto;
+	.clear {
+		clear: left;
+	}
+	.footer_about {
+		font-size: 24px;
+		box-sizing: border-box;
+		display: block;
+		float: left;
+		margin-top: 50px;
+		line-height: 32px;
+		font-weight: bold;
+		width: 33.3333%;
+		padding-left: 3%;
+		@include iphone5-h {
+			display: none;
+		}
+	}
+	.footer_contact {
+		font-size: 24px;
+		display: block;
+		line-height: 32px;
+		font-weight: bold;
+		float: left;
+		margin-top: 50px;
+		box-sizing: border-box;
+		width: 33.3333%;
+		padding-left: 1%;
+		@include iphone5-h {
+			width: 50%;
+		}
+		@include iphone5-h {
+			padding-left:13%;
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		@include iphone6-v {
+			padding-left:9%;
+			font-size: 24px;
+			margin-top: 15px;
+		}
+	}
+	.footer_logo {
+		display: block;
+		height: 48px;
+		margin-top: 54px;
+		box-sizing: border-box;
+		float: left;
+		padding-left: 6%;
+		width: 33.3333%;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		@include pad {
+			padding-left: 0%;
+			padding-right: 3%;
+		}
+		@include iphone5-h {
+			width: 50%;
+			margin-top: 20px;
+			padding-right: 10%;
+		}
+		@include iphone6-v {
+			padding-right:5%;
+			margin-top: 20px;
+		}
+	}
+	.footer_about_content {
+		display: block;
+		width: 33.3333%;
+		height: auto;
+		float: left;
+		padding-left: 3%;
+		line-height: 24px;
+		margin-bottom: 32px;
+		font-weight: bold;
+		box-sizing: border-box;
+		@include pad {
+			margin-bottom: 10px;
+		}
+		@include iphone6-h {
+			margin-bottom: 0;
+		}
+		@include iphone5-h {
+			display: none;
+		}
+	}
+	.footer_contact_content {
+	    display: block;
+	    list-style-type: circle;
+	    float: left;
+	    list-style-position: inside;
+	    padding-left: 2%;
+	    width: 33.333%;
+	    font-weight: bold;
+	    text-align: left;
+	    box-sizing: border-box;
+	    li {
+	    	line-height: 24px;
+	    }
+			@include pad {
+				list-style: none;
+			}
+	    @include iphone5-h {
+				width: 50%;
+				padding-left:4%;
+				font-size: 19px;
+				list-style: none;
+			}
+			@include iphone6-v {
+				padding-left:4%;
+				font-size: 16px;
+				list-style: none;
+				margin-top: -9px;
+			}
+			@include iphone5-v {
+				font-size: 15px;
+				padding-left:5%;
+			}
+	}
+	.gtf{
+		display: inline-block;
+	    width: 33.3333%;
+	    box-sizing: border-box;
+	    padding-left: 18%;
+	    @include pad {
+	    	padding-left: 15%;
+	    }
+	    @include iphone6-h {
+				padding-left:13%;
+				margin-bottom: 25px;
+			}
+			@include iphone5-h {
+				margin-bottom: 0px;
+			}
+			@include iphone6-v {
+				width: 50%;
+				padding-left:13%;
+				margin-bottom: 10px;
+			}
+	    .fab.fa-google-plus-square{
+			color:#DB4437;
+			font-size:36px;
+			margin-bottom:80px;
+			margin-top: 22px;
+			box-sizing: border-box;
+			display:inline-block;
+			@include iphone5-h {
+				margin-bottom: 30px;
+			}
+			@include iphone6-v {
+				margin-bottom: 0px;
+			}
+		}
+		.fab.fa-twitter-square{
+			color:#41ABE1;
+			font-size: 36px;
+			display:inline-block;
+		}
+		.fab.fa-facebook-square{
+			color:#3A5795;
+			font-size: 36px;
+			display:inline-block;
+		}
+	}
+}

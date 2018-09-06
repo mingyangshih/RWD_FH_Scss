@@ -1,0 +1,140 @@
+@mixin pad{
+	@media (max-width: 768px){
+		@content
+	}
+}
+
+@mixin iphone6-h{
+	@media (max-width:668px){
+		@content
+	}
+}
+@mixin iphone6-v{
+	@media (max-width:375px){
+		@content
+	}
+}
+@mixin iphone5-h{
+	@media (max-width:568px){
+		@content
+	}
+}
+@mixin iphone5-v{
+	@media (max-width:320px){
+		@content
+	}
+}
+
+/*image replace words*/
+@mixin replace-word(){
+	text-indent: -100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@mixin word-color($bg-color,$font-style){
+	background-color: $bg-color;
+	font-family: $font-style;
+}
+
+/*修改button*/
+@mixin custom-button{
+	label[for="yes"],label[for="no"]{
+		cursor:pointer;
+	}
+	input[name="vegetable"]{
+		width: 16px;
+		height: 16px;
+	}
+	/* Hide the browser's default radio button */
+	.container input{
+		opacity:0;
+		cursor:pointer;
+		position:absolute;
+		left: 45px;
+	    top: -2px;
+	}
+	/* Create a custom radio button */
+	.radiomark {
+	    position: absolute;
+	    top: 3px;
+	    left: 43px;
+	    height: 18px;
+	    width: 18px;
+	    background-color: #eee;
+	    border-radius: 50%;
+	    border: 1px solid #9B9B9B;
+	}
+	/* On mouse-over, add a grey background color */
+	.container:hover input ~ .radiomark {
+	    background-color: #ccc;
+	}
+	/* When the radio button is checked, add a blue background */
+	.container input:checked ~ .radiomark {
+	    background-color: rgba(239,233,231,1);
+	    border: 1px solid #4A90E2;
+	}
+	/* Create the indicator (the dot/circle - hidden when not checked) */
+	.radiomark:after {
+	    content: "";
+	    position: absolute;
+	    display: none;
+	}
+	/* Show the indicator (dot/circle) when checked */
+	.container input:checked ~ .radiomark:after {
+	    display: block;
+	}
+	/* Style the indicator (dot/circle) */
+	.container .radiomark:after {
+	 	top: 5px;
+		left: 5px;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: #4A90E2;
+	}	
+}
+/*login box setting*/
+@mixin log-in {
+	.email-address{
+		line-height: 21px;
+		margin-top: 16px;
+		margin-bottom: 3px;
+	}
+	.log-in-email{
+		position:relative;
+		width: 100%;
+	}
+	.log-in-password{
+		position:relative;
+		margin-bottom: 30px;
+	}
+
+	input[type="email"],input[type=password]{
+		background: #FFFFFF;
+		border: 1px solid #CCCCCC;
+		box-shadow: inset 0px 1px 0px 0px #ECECEC;
+		border-radius: 3px;
+		outline:none;
+		width: 100%;
+		text-indent: 30px;
+	}
+	input[type="email"]:hover,input[type=password]:hover{
+		box-shadow: inset -2px -2px 0px 0px #C7FFEB;
+	}
+	input[type="email"]:focus,input[type=password]:focus{
+		background-color:#F0FABF;
+	}
+	.far.fa-envelope{
+		position:absolute;
+		top: 6px;
+		left: 9px;
+		color:rgba(61,17,0,0.50);
+	}
+	.fas.fa-unlock-alt{
+		position:absolute;
+		top: 6px;
+		left: 9px;
+		color:rgba(61,17,0,0.50);
+	}
+}

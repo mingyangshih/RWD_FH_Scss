@@ -1,0 +1,364 @@
+/*guest query*/
+.guest_query {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom:30px;
+	box-sizing: border-box;
+	background-color:rgba(239,233,231,1);
+	color:#3D1101;
+	font-family: $fontstyle;
+	position:relative;
+	.gq_title{
+		display: block;
+		text-align: center;
+		font-size: 20px;
+		line-height: 32px;
+		font-weight: bold;
+		z-index: 3;
+		background-color: $bgcolor;
+		width: 19.6577%;
+		position: relative;
+		left: 38.4175%;
+		@include pad {
+			width: 26.6577%;
+			left:35.4175%;
+		}
+		@include iphone6-h {
+			width: 30.6577%;
+	    	left: 33.4175%;
+		}
+		@include iphone5-h {
+			width: 35.6577%;
+	    	left: 31.0175%;
+		}
+		@include iphone6-v {
+			width: 53.6577%;
+	    	left: 22.0175%;
+		}
+		@include iphone5-v {
+			width: 62.6577%;
+    		left: 18.0175%;
+		}
+	}
+	.line{
+		width: 43.9466%;
+		border:1px solid #979797;
+		position:absolute;
+		top:82px;
+		z-index: 1;
+		left:26.78741%;
+		@include iphone5-h {
+			width: 47.9466%;
+			left: 24.78741%;
+		}
+		@include iphone6-v {
+			width: 76.9466%;
+	    	left: 10.78741%;
+		}
+	}
+	.guest_query_content{
+		li{
+			width: 32.99%;
+			display:inline-block;
+			box-sizing: border-box;
+			text-align:center;
+			vertical-align: top;
+			@include pad {
+				width: 100%;
+			}
+			@include iphone5-h {
+				width: 100%;
+			}
+			@include iphone6-v {
+				display:block;
+    		width: 100%;
+			}
+		}
+		img{
+			border-radius: 200px;
+			margin-top: 31px;
+			box-sizing: border-box;
+			@include iphone6-v {
+			    margin-top: 20px;
+			}
+		}
+		h4{
+			font-size: 18px;
+			margin-top: 20px;
+			font-weight: bold;
+			margin-bottom: 11px;
+			@include iphone6-v {
+				font-size: 20px;
+			    margin-top: 5px;
+			    font-weight: bold;
+			    margin-bottom:0;
+			}
+		}
+		p{
+			text-align: left;
+			line-height: 20px;
+			width: 75%;
+			box-sizing: border-box;
+			margin-left:15%;
+			margin-bottom: 50px;
+			@include pad {
+				width: 51%;
+				margin-left: 26%;
+				margin-bottom: 20px;
+			}
+			@include iphone5-h {
+				display:none;
+			}
+		}
+	}
+}
+
+/*today chef*/
+
+.today-chef{
+	width: 100%;
+	background: $bgcolor1;
+	font-family: $fontstyle;
+	@include iphone6-v {
+		padding-top: 5px;
+	}
+	img {
+		margin-left: 4.0038%;
+		width: 44.804575%;
+		height: auto;
+		display:inline-block;
+		@include iphone6-h {
+			margin-left: 0;
+			width: 50%;
+		}
+		@include iphone6-v {
+			margin-left: 0;
+		    width: 100%;
+		    display: block;
+		}
+	}
+	ul {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		@include iphone6-h {
+			width: 49%;
+		}
+		@include iphone5-h {
+			margin-top: 100px;
+		}
+		@include iphone6-v {
+			display: block;
+    		width: 100%;
+    		margin-top: 0;
+		}
+	}
+	h3 {
+		color: $chefwordcolor;
+		font-size: 20px;
+		line-height: 32px;
+		margin-top: 81px;
+		margin-left: 2.3832%;
+		font-weight: bold;
+		@include pad {
+			margin-top: auto;
+		}
+	}
+	h4 {
+		color: $chefwordcolor;
+		margin-left: 2.3832%;
+		line-height: 21px;
+		font-weight: bold;
+		@include iphone6-h {
+			font-size: 14px;
+		}
+	}
+	p {
+		margin-top: 16px;
+		color:#EFE9E7;
+		margin-left: 2.3832%;
+		width: 78.1697%;
+		line-height: 20px;
+		@include pad {
+			width: 87.1697%;
+		}
+		@include iphone6-h {
+			font-size: 14px;
+			width: 90.1697%;
+		}
+		@include iphone5-h {
+			display: none;
+		}
+	}
+}
+
+/*others-feeling*/
+.others-feeling{
+	max-width:1049px;
+	background: $bgcolor;
+	font-family: $fontstyle;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	overflow-x: auto;
+	h3 {
+		font-size: 24px;
+		color: $wordcolor;
+		display: block;
+		margin-left: 428px;
+		width: 168px;
+		font-weight: bold;
+		margin-bottom: 32px;
+		font-family: $fontstyle;
+	}
+	ul {
+		width: 1049px;
+	}
+	li {
+		display: inline-block;
+		width: 32.99999%;
+	}
+	img {
+		border-radius: 67px;
+		display: inline-block;
+		margin-left: 5.00381%;
+	}
+	p {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 18px;
+		color: $wordcolor;
+	}
+	.title {
+		margin-left: 3%;
+		margin-top: 25px;
+	}
+	.content{
+		margin-left: 27%;
+		width: 72%;
+		line-height: 24px;
+	}
+	.person {
+		color:rgba(61,17,0,0.75);
+		margin-left: 68%;
+		line-height: 40px;
+	}
+}
+
+/*position*/
+.position {
+	padding: 50px 0;
+	width: 100%;
+	box-sizing: border-box;
+	@include word-color($bgmap,$fontstyle);
+	color: $bgcolor1;
+	position: relative;
+	.seat {
+		width: 216px;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: bold;
+		margin-bottom: 38px;
+	}
+	.map, .form {
+		width: 48.8%;
+		height: auto;
+		box-sizing: border-box;
+		display: inline-block;
+		vertical-align: top;
+		@include pad {
+			width: 48.8%;
+		}
+		@include iphone6-v {
+			display:block;
+			width: 100%;
+			margin:0 auto;
+		}
+	}
+	.send{
+		margin-top: 28px;
+		margin-left: 60.7264%;
+		@include pad {
+			margin-left: 50%;
+		}
+		@include iphone5-h {
+			margin-left: 45%;
+		}
+		@include iphone6-v {
+			margin-left: 50%;
+   	 		margin-top: 0;
+		}
+		.pure-button.cancel, .pure-button.send-out{
+			background: rgba(0,0,0,0.35);
+			border-radius: 3px;
+			width: 70px;
+			color:$linkcolor;
+			&:hover{
+				background:#F56C23 100%;
+			}
+		}
+	}
+	.form {
+		@include pad {
+			padding-left: 2%;
+			}
+		form{
+			padding-left: 1.9025%;
+			label{
+				display: block;
+				margin-bottom: 6px;
+				font-size: 20px;
+			}
+			input{
+				display: block;
+			}
+			.radio-other{
+				margin-bottom: 12px;
+				width: 87.70256%;
+				background: #FFFFFF;
+				border: 1px solid #CCCCCC;
+				box-shadow: inset 0px 1px 0px 0px #ECECEC;
+				border-radius: 3px;
+				height: 32px;
+				text-indent: 14px;
+				font-size: $font-normal;
+				outline: none;
+				&:hover{
+					box-shadow:inset -2px -2px 1px 1px #C7FFEB;
+				}
+				&:focus{
+					background-color:#F0FABF;
+				}
+			}
+			input[type="radio"]{
+				display:inline-block;
+				line-height: 20px;
+				margin-top: 6px;
+			}
+			label[for="yes"], label[for="no"]{
+				display:inline-block;
+				position:relative;
+				margin-right: 50px;
+				cursor: pointer;
+			}
+			@include custom-button;
+		}
+	}
+	.map {
+		iframe {
+			width: 100%;
+			height: 386px;
+			padding-left: 8.0046%;
+			box-sizing: border-box;
+			@include pad {
+				padding-left: 4%;
+			}
+			@include iphone6-v {
+				padding-left: 1%;
+		    	padding-right: 1%;
+		    	height:auto;
+			}
+		}
+	}
+}
